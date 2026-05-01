@@ -14,12 +14,16 @@ public class DistanceTraveled {
         double speed = kb.nextDouble();
 
         System.out.print("Enter the number of hours traveled: ");
-        int hoursInt = kb.nextInt();
-        int hours = 1;
+        double hoursInt = kb.nextDouble();
+        double hours = 1;
 
         System.out.println("\n\tHour\tDistance Traveled");
 
         while (hours <= hoursInt) {
+            if (hoursInt - hours < 1) {
+                hours = hoursInt;
+            }
+           
             double distance = speed * hours;
             System.out.println("\n\t" + hours + ":\t" + distance + " miles");
             hours++;
