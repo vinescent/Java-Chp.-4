@@ -1,0 +1,60 @@
+// Shaurya Jain
+// Conversion.java
+
+public class Conversion {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
+        int choice;
+
+        while (choice != -99) {
+            System.out.println("Enter 1 to convert between fahrenheit and celsius, 2 to convert between feet and miles, 0 to exit: ");
+            choice = kb.nextInt();
+
+            if (choice == 1) {
+                FtoC();
+            } else if (choice == 2) {
+                CtoF();
+            } else if (choice == 3) {
+                FToM();
+            } else if (choice == 4) {
+                MToF();
+            } else {
+                System.out.println("Exiting program.");
+            }
+        }
+    }
+
+    public static void FtoC() {
+        Scanner kb = new Scanner(System.in);
+        
+        System.out.print("Enter 1 to convert F-C or 2 to convert C-F: ");
+        int conv = kb.nextInt();
+
+        double low = 0;
+        double high = 0;
+
+        if (conv == 1) {
+            System.out.print("\nEnter the lowest temperature: ");
+            low = kb.nextDouble();
+
+            System.out.print("\nEnter the highest temperature: ");
+            high = kb.nextDouble();
+        } else if (conv == 2) {
+            System.out.print("\nEnter the lowest temperature: ");
+            low = kb.nextDouble();
+
+            System.out.print("\nEnter the highest temperature: ");
+            high = kb.nextDouble();
+        } else {
+            System.out.println("Invalid input.");
+        }
+
+        double fahrenheight;
+        System.out.println("\nCelcius\t\tFahrenheight:");
+
+        for (double first_temp = low; first_temp <= high; first_temp++) {
+            fahrenheight = (first_temp * 9 / 5.0) + 32;
+            System.out.println(first_temp + "\t\t" + fahrenheight);
+        }
+    }
+}
