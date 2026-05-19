@@ -13,11 +13,7 @@ public class Conversion {
             if (choice == 1) {
                 FtoC();
             } else if (choice == 2) {
-                CtoF();
-            } else if (choice == 3) {
-                FToM();
-            } else if (choice == 4) {
-                MToF();
+                FtoM();
             } else {
                 System.out.println("Exiting program.");
             }
@@ -55,6 +51,40 @@ public class Conversion {
         for (double first_temp = low; first_temp <= high; first_temp++) {
             fahrenheight = (first_temp * 9 / 5.0) + 32;
             System.out.println(first_temp + "\t\t" + fahrenheight);
+        }
+    }
+
+    public static void FtoM() {
+        Scanner kb = new Scanner(System.in);
+        
+        System.out.print("Enter 1 to convert F-M or 2 to convert M-F: ");
+        int conv = kb.nextInt();
+
+        double low = 0;
+        double high = 0;
+
+        if (conv == 1) {
+            System.out.print("\nEnter the lowest distance: ");
+            low = kb.nextDouble();
+
+            System.out.print("\nEnter the highest distance: ");
+            high = kb.nextDouble();
+        } else if (conv == 2) {
+            System.out.print("\nEnter the lowest distance: ");
+            low = kb.nextDouble();
+
+            System.out.print("\nEnter the highest distance: ");
+            high = kb.nextDouble();
+        } else {
+            System.out.println("Invalid input.");
+        }
+
+        double miles;
+        System.out.println("\nFeet\t\tMiles:");
+
+        for (double first_dist = low; first_dist <= high; first_dist++) {
+            miles = first_dist / 5280;
+            System.out.println(first_dist + "\t\t" + miles);
         }
     }
 }
