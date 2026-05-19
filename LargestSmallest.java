@@ -11,14 +11,14 @@ public class LargestSmallest {
         
         int minVal = 101; 
         int maxVal = 0;   
-        int num;
+        int num = 0;
 
         boolean hasValidData = false;
 
-        while (true) {
+        while (num != -99) {
             System.out.print("Enter a value (-99 to stop): ");
             num = keyboard.nextInt();
-            
+
             if (num == -99) {
                 break;
             }
