@@ -1,6 +1,6 @@
 // Shaurya Jain
 // Conversion.java
-// This program converts between fahrenheit and celsius, and feet and miles. 
+// This program converts between fahrenheit and celsius, and feet and miles.
 
 import java.util.Scanner;
 
@@ -10,17 +10,27 @@ public class Conversion {
         int choice = 67;
 
         while (choice != 0) {
-            System.out.print("Enter 1 to convert between fahrenheit and celsius, 2 to convert between feet and miles, 0 to exit: ");
-            choice = kb.nextInt();
-
-            if (choice == 1) {
-                FtoC();
-            } else if (choice == 2) {
-                FtoM();
-            } else {
-                System.out.println("Exiting program.");
-            }
+            choice = menu();
         }
+11
+        if (choice == 1) {
+            FtoC();
+        } else if (choice == 2) {
+            FtoM();
+        } else {
+            System.out.println("Exiting program.");
+        }
+        }
+    }
+
+    public static int menu() {
+        Scanner kb = new Scanner(System.in);
+        int choice;
+
+        System.out.print("Enter 1 to convert between fahrenheit and celsius, 2 to convert between feet and miles, 0 to exit: ");
+        choice = kb.nextInt();
+
+        return choice;
     }
 
     public static void FtoC() {
@@ -87,7 +97,7 @@ public class Conversion {
 
         for (double first_dist = low; first_dist <= high; first_dist++) {
             miles = first_dist / 5280.0;
-            System.out.println(first_dist + "\t\t" + miles);
+            System.out.println(first_dist + "\t" + miles);
         }
     }
 }
