@@ -97,7 +97,7 @@ public class Conversion {
 
         for (double first_dist = low; first_dist <= high; first_dist++) {
             miles = first_dist / 5280.0;
-            System.out.println(first_dist + "\t" + miles);
+            System.out.println(first_dist + "\t\t" + miles);
         }
     }
 }
