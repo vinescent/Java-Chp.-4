@@ -7,11 +7,8 @@ import java.util.Scanner;
 public class Conversion {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
-        int choice = 67;
 
-        while (choice != 0) {
-            choice = menu();
-        }
+        int choice = menu();
 
         if (choice == 1) {
             FtoC();
@@ -24,10 +21,12 @@ public class Conversion {
 
     public static int menu() {
         Scanner kb = new Scanner(System.in);
-        int choice;
+        int choice = -1;
 
-        System.out.print("Enter 1 to convert between fahrenheit and celsius, 2 to convert between feet and miles, 0 to exit: ");
-        choice = kb.nextInt();
+        while (choice != 0 && choice != 1 && choice != 2) {
+            System.out.print("Enter 1 to convert between fahrenheit and celsius, 2 to convert between feet and miles, 0 to exit: ");
+            choice = kb.nextInt();
+        }
 
         return choice;
     }
