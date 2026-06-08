@@ -20,7 +20,6 @@ public class Conversion {
         } else {
             System.out.println("Exiting program.");
         }
-        }
     }
 
     public static int menu() {
