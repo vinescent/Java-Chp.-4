@@ -20,7 +20,7 @@ public class DistanceTraveled {
         System.out.println("\n\tHour\tDistance Traveled");
 
         while (hours <= hoursInt) {
-           
+            
             double distance = speed * hours;
             System.out.println("\n\t" + hours + ":\t" + distance + " miles");
             
