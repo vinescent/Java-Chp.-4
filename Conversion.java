@@ -12,7 +12,7 @@ public class Conversion {
         while (choice != 0) {
             choice = menu();
         }
-11
+
         if (choice == 1) {
             FtoC();
         } else if (choice == 2) {
